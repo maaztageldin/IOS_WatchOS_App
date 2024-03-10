@@ -7,7 +7,102 @@
 		<key>MindHarmony.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>MindHarmonyWatch.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+		<key>Promises (Playground) 1.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>Promises (Playground) 2.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+		<key>Promises (Playground) 3.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>Promises (Playground) 4.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
+		<key>Promises (Playground) 5.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
+		<key>Promises (Playground).xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>WatchMindHarmony Watch App (Notification).xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>9</integer>
+		</dict>
+		<key>WatchMindHarmony Watch App.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>DD66A6DB2B97DAF400DABCEC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DD66A6EA2B97DAF900DABCEC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DD66A6F42B97DAF900DABCEC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DD8202092B76877600E48B10</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DD8202192B76877900E48B10</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DD8202232B76877900E48B10</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DD82023A2B7687E100E48B10</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

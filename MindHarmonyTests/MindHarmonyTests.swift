@@ -6,6 +6,7 @@
 //
 
 import XCTest
+import Firebase
 @testable import MindHarmony
 
 final class MindHarmonyTests: XCTestCase {

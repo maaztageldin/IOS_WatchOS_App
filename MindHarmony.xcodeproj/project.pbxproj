@@ -7,77 +7,396 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD01BD302B9CB316003F40AB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DD01BD2F2B9CB316003F40AB /* GoogleService-Info.plist */; };
+		DD01BD3A2B9CF556003F40AB /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD01BD2C2B9C7BC0003F40AB /* DataManager.swift */; };
+		DD01BD3C2B9CF927003F40AB /* iPhoneCommunicationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD01BD3B2B9CF927003F40AB /* iPhoneCommunicationManager.swift */; };
+		DD01BD3E2B9CFEFE003F40AB /* WatchOSCommunicationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD01BD3D2B9CFEFE003F40AB /* WatchOSCommunicationManager.swift */; };
+		DD01BD422B9D2700003F40AB /* MeditationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD01BD412B9D2700003F40AB /* MeditationDetailView.swift */; };
+		DD01BD432B9D2D4A003F40AB /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4126B62B96715F00E46B49 /* CountdownView.swift */; };
+		DD1A2DCF2B8BF64900ED08AF /* CategoryListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1A2DCE2B8BF64900ED08AF /* CategoryListScreen.swift */; };
+		DD254F632B99255600D7D83D /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = DD254F622B99255600D7D83D /* FirebaseFirestore */; };
+		DD254F672B99259100D7D83D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = DD254F662B99259100D7D83D /* FirebaseAuth */; };
+		DD254F6B2B99259100D7D83D /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = DD254F6A2B99259100D7D83D /* FirebaseStorage */; };
+		DD254F702B9A3A1100D7D83D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD254F6F2B9A3A1100D7D83D /* HomeView.swift */; };
+		DD254F722B9A3A3D00D7D83D /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD254F712B9A3A3D00D7D83D /* ProfileView.swift */; };
+		DD254F742B9A3A6600D7D83D /* DeviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD254F732B9A3A6600D7D83D /* DeviceView.swift */; };
+		DD254F762B9A825C00D7D83D /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD254F752B9A825C00D7D83D /* MenuView.swift */; };
+		DD254F972B9BADE800D7D83D /* Meditation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD64296B2B93ED6C00C2A6AA /* Meditation.swift */; };
+		DD254F982B9BADF000D7D83D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41269C2B95184F00E46B49 /* User.swift */; };
+		DD254F992B9BAE5000D7D83D /* Color+Extennsion.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6429702B93F31800C2A6AA /* Color+Extennsion.swift */; };
+		DD3C51B22B926A4B00B0263B /* SingInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3C51B12B926A4B00B0263B /* SingInView.swift */; };
+		DD3C51B72B928C7900B0263B /* SignInHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3C51B62B928C7900B0263B /* SignInHeader.swift */; };
+		DD3C51BC2B9292BD00B0263B /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3C51BB2B9292BD00B0263B /* SignUpView.swift */; };
+		DD3C51C52B929B5200B0263B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DD3C51C42B929B5200B0263B /* GoogleService-Info.plist */; };
+		DD41269D2B95184F00E46B49 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41269C2B95184F00E46B49 /* User.swift */; };
+		DD4126A32B951BAD00E46B49 /* MeditationDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4126A22B951BAD00E46B49 /* MeditationDetailsView.swift */; };
+		DD4126A82B95399C00E46B49 /* ToggleFavorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4126A72B95399C00E46B49 /* ToggleFavorite.swift */; };
+		DD4126AD2B95428700E46B49 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4126AC2B95428700E46B49 /* DataManager.swift */; };
+		DD4126B22B966D4900E46B49 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4126B12B966D4900E46B49 /* RoundedView.swift */; };
+		DD4126B72B96715F00E46B49 /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4126B62B96715F00E46B49 /* CountdownView.swift */; };
+		DD5110BF2B9BC17E007F7394 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = DD5110BE2B9BC17E007F7394 /* FirebaseAuth */; };
+		DD5110C12B9BC186007F7394 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = DD5110C02B9BC186007F7394 /* FirebaseFirestore */; };
+		DD5110C32B9BC191007F7394 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = DD5110C22B9BC191007F7394 /* FirebaseStorage */; };
+		DD5110C92B9BC705007F7394 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = DD5110C82B9BC705007F7394 /* FirebaseFirestore */; };
+		DD5110CB2B9BC759007F7394 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = DD5110CA2B9BC759007F7394 /* FirebaseFirestore */; };
+		DD6429562B93DBE900C2A6AA /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6429552B93DBE900C2A6AA /* MainTabView.swift */; };
+		DD64295A2B93DC8100C2A6AA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6429592B93DC8100C2A6AA /* HomeView.swift */; };
+		DD64295E2B93E34900C2A6AA /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD64295D2B93E34900C2A6AA /* SearchBarView.swift */; };
+		DD6429632B93E40F00C2A6AA /* meditationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6429622B93E40F00C2A6AA /* meditationViewModel.swift */; };
+		DD6429672B93E55900C2A6AA /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6429662B93E55900C2A6AA /* HeaderView.swift */; };
+		DD64296C2B93ED6C00C2A6AA /* Meditation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD64296B2B93ED6C00C2A6AA /* Meditation.swift */; };
+		DD6429712B93F31800C2A6AA /* Color+Extennsion.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6429702B93F31800C2A6AA /* Color+Extennsion.swift */; };
+		DD6429752B94A01200C2A6AA /* MainMeditationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6429742B94A01200C2A6AA /* MainMeditationInfo.swift */; };
+		DD6429792B94A0CE00C2A6AA /* MeditationItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6429782B94A0CE00C2A6AA /* MeditationItemView.swift */; };
+		DD66A6DF2B97DAF500DABCEC /* WatchMindHarmonyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD66A6DE2B97DAF500DABCEC /* WatchMindHarmonyApp.swift */; };
+		DD66A6E12B97DAF500DABCEC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD66A6E02B97DAF500DABCEC /* ContentView.swift */; };
+		DD66A6E32B97DAF800DABCEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD66A6E22B97DAF800DABCEC /* Assets.xcassets */; };
+		DD66A6E62B97DAF800DABCEC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD66A6E52B97DAF800DABCEC /* Preview Assets.xcassets */; };
 		DD82020E2B76877600E48B10 /* MindHarmonyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD82020D2B76877600E48B10 /* MindHarmonyApp.swift */; };
 		DD8202102B76877600E48B10 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD82020F2B76877600E48B10 /* ContentView.swift */; };
 		DD8202122B76877900E48B10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD8202112B76877900E48B10 /* Assets.xcassets */; };
 		DD8202152B76877900E48B10 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD8202142B76877900E48B10 /* Preview Assets.xcassets */; };
-		DD82021F2B76877900E48B10 /* MindHarmonyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD82021E2B76877900E48B10 /* MindHarmonyTests.swift */; };
-		DD8202292B76877900E48B10 /* MindHarmonyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8202282B76877900E48B10 /* MindHarmonyUITests.swift */; };
-		DD82022B2B76877900E48B10 /* MindHarmonyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD82022A2B76877900E48B10 /* MindHarmonyUITestsLaunchTests.swift */; };
+		DDBF23992B9752A30080AF3F /* relaxation-1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DDBF23982B9752A30080AF3F /* relaxation-1.mp3 */; };
+		DDBF23A32B9756E00080AF3F /* CountdownManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBF23A22B9756E00080AF3F /* CountdownManager.swift */; };
+		DDBF23A92B9770230080AF3F /* DeviceControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBF23A82B9770230080AF3F /* DeviceControlView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		DD82021B2B76877900E48B10 /* PBXContainerItemProxy */ = {
+		DD5110BC2B9BBA09007F7394 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DD8202022B76877600E48B10 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = DD8202092B76877600E48B10;
-			remoteInfo = MindHarmony;
-		};
-		DD8202252B76877900E48B10 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DD8202022B76877600E48B10 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DD8202092B76877600E48B10;
-			remoteInfo = MindHarmony;
+			remoteGlobalIDString = DD66A6DB2B97DAF400DABCEC;
+			remoteInfo = "WatchMindHarmony Watch App";
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		DD66A7032B97DAFA00DABCEC /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		DD01BD2C2B9C7BC0003F40AB /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		DD01BD2F2B9CB316003F40AB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DD01BD3B2B9CF927003F40AB /* iPhoneCommunicationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPhoneCommunicationManager.swift; sourceTree = "<group>"; };
+		DD01BD3D2B9CFEFE003F40AB /* WatchOSCommunicationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchOSCommunicationManager.swift; sourceTree = "<group>"; };
+		DD01BD3F2B9D217D003F40AB /* WatchMindHarmony Watch App.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = "WatchMindHarmony Watch App.entitlements"; sourceTree = "<group>"; };
+		DD01BD402B9D21A2003F40AB /* MindHarmony.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = MindHarmony.entitlements; sourceTree = "<group>"; };
+		DD01BD412B9D2700003F40AB /* MeditationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationDetailView.swift; sourceTree = "<group>"; };
+		DD1A2DCE2B8BF64900ED08AF /* CategoryListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListScreen.swift; sourceTree = "<group>"; };
+		DD254F6F2B9A3A1100D7D83D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		DD254F712B9A3A3D00D7D83D /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		DD254F732B9A3A6600D7D83D /* DeviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceView.swift; sourceTree = "<group>"; };
+		DD254F752B9A825C00D7D83D /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		DD254F902B9BA57700D7D83D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		DD3C51B12B926A4B00B0263B /* SingInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingInView.swift; sourceTree = "<group>"; };
+		DD3C51B62B928C7900B0263B /* SignInHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInHeader.swift; sourceTree = "<group>"; };
+		DD3C51BB2B9292BD00B0263B /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		DD3C51C42B929B5200B0263B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DD41269C2B95184F00E46B49 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		DD4126A22B951BAD00E46B49 /* MeditationDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationDetailsView.swift; sourceTree = "<group>"; };
+		DD4126A72B95399C00E46B49 /* ToggleFavorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleFavorite.swift; sourceTree = "<group>"; };
+		DD4126AC2B95428700E46B49 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		DD4126B12B966D4900E46B49 /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
+		DD4126B62B96715F00E46B49 /* CountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
+		DD6429552B93DBE900C2A6AA /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		DD6429592B93DC8100C2A6AA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		DD64295D2B93E34900C2A6AA /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		DD6429622B93E40F00C2A6AA /* meditationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = meditationViewModel.swift; sourceTree = "<group>"; };
+		DD6429662B93E55900C2A6AA /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		DD64296B2B93ED6C00C2A6AA /* Meditation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meditation.swift; sourceTree = "<group>"; };
+		DD6429702B93F31800C2A6AA /* Color+Extennsion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extennsion.swift"; sourceTree = "<group>"; };
+		DD6429742B94A01200C2A6AA /* MainMeditationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMeditationInfo.swift; sourceTree = "<group>"; };
+		DD6429782B94A0CE00C2A6AA /* MeditationItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationItemView.swift; sourceTree = "<group>"; };
+		DD66A6DC2B97DAF500DABCEC /* WatchMindHarmony Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WatchMindHarmony Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD66A6DE2B97DAF500DABCEC /* WatchMindHarmonyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchMindHarmonyApp.swift; sourceTree = "<group>"; };
+		DD66A6E02B97DAF500DABCEC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DD66A6E22B97DAF800DABCEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DD66A6E52B97DAF800DABCEC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DD66A6EF2B97DAF900DABCEC /* WatchMindHarmony_Watch_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchMindHarmony_Watch_AppTests.swift; sourceTree = "<group>"; };
+		DD66A6F92B97DAFA00DABCEC /* WatchMindHarmony_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchMindHarmony_Watch_AppUITests.swift; sourceTree = "<group>"; };
+		DD66A6FB2B97DAFA00DABCEC /* WatchMindHarmony_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchMindHarmony_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DD82020A2B76877600E48B10 /* MindHarmony.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MindHarmony.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD82020D2B76877600E48B10 /* MindHarmonyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindHarmonyApp.swift; sourceTree = "<group>"; };
 		DD82020F2B76877600E48B10 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DD8202112B76877900E48B10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD8202142B76877900E48B10 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		DD82021A2B76877900E48B10 /* MindHarmonyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MindHarmonyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD82021E2B76877900E48B10 /* MindHarmonyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindHarmonyTests.swift; sourceTree = "<group>"; };
-		DD8202242B76877900E48B10 /* MindHarmonyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MindHarmonyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD8202282B76877900E48B10 /* MindHarmonyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindHarmonyUITests.swift; sourceTree = "<group>"; };
 		DD82022A2B76877900E48B10 /* MindHarmonyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindHarmonyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DDBF23982B9752A30080AF3F /* relaxation-1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "relaxation-1.mp3"; sourceTree = "<group>"; };
+		DDBF23A22B9756E00080AF3F /* CountdownManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownManager.swift; sourceTree = "<group>"; };
+		DDBF23A82B9770230080AF3F /* DeviceControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceControlView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		DD66A6D92B97DAF400DABCEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD254F672B99259100D7D83D /* FirebaseAuth in Frameworks */,
+				DD5110C92B9BC705007F7394 /* FirebaseFirestore in Frameworks */,
+				DD254F6B2B99259100D7D83D /* FirebaseStorage in Frameworks */,
+				DD5110CB2B9BC759007F7394 /* FirebaseFirestore in Frameworks */,
+				DD254F632B99255600D7D83D /* FirebaseFirestore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DD8202072B76877600E48B10 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DD8202172B76877900E48B10 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DD8202212B76877900E48B10 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				DD5110BF2B9BC17E007F7394 /* FirebaseAuth in Frameworks */,
+				DD5110C12B9BC186007F7394 /* FirebaseFirestore in Frameworks */,
+				DD5110C32B9BC191007F7394 /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD01BD2E2B9CA85E003F40AB /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				DD254F6F2B9A3A1100D7D83D /* HomeView.swift */,
+				DD01BD412B9D2700003F40AB /* MeditationDetailView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		DD254F6D2B992B2200D7D83D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DD254F6E2B992B3800D7D83D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DD01BD2E2B9CA85E003F40AB /* Home */,
+				DD66A6E02B97DAF500DABCEC /* ContentView.swift */,
+				DD254F712B9A3A3D00D7D83D /* ProfileView.swift */,
+				DD254F732B9A3A6600D7D83D /* DeviceView.swift */,
+				DD254F752B9A825C00D7D83D /* MenuView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DD254F8F2B9B7DE700D7D83D /* SharedModels */ = {
+			isa = PBXGroup;
+			children = (
+				DD64296A2B93ED3C00C2A6AA /* Models */,
+			);
+			path = SharedModels;
+			sourceTree = SOURCE_ROOT;
+			wrapsLines = 1;
+		};
+		DD254F912B9BA5B300D7D83D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DD3C51AD2B9239CD00B0263B /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		DD3C51AE2B9239E100B0263B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				DD4126A72B95399C00E46B49 /* ToggleFavorite.swift */,
+				DD4126AC2B95428700E46B49 /* DataManager.swift */,
+				DD01BD3B2B9CF927003F40AB /* iPhoneCommunicationManager.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		DD3C51AF2B9239F100B0263B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DDBF23A72B976FFF0080AF3F /* ConnectedDevices */,
+				DD4126A12B951B4800E46B49 /* GoRelax */,
+				DD6429542B93DBAE00C2A6AA /* MainTabView */,
+				DD6429532B93DB9900C2A6AA /* Home */,
+				DD3C51C92B929BDB00B0263B /* Auth */,
+				DD3C51B52B926CA600B0263B /* CommonViews */,
+				DD82020F2B76877600E48B10 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DD3C51B02B9269DB00B0263B /* SingIn */ = {
+			isa = PBXGroup;
+			children = (
+				DD3C51B12B926A4B00B0263B /* SingInView.swift */,
+			);
+			path = SingIn;
+			sourceTree = "<group>";
+		};
+		DD3C51B52B926CA600B0263B /* CommonViews */ = {
+			isa = PBXGroup;
+			children = (
+				DD3C51B62B928C7900B0263B /* SignInHeader.swift */,
+				DD4126B12B966D4900E46B49 /* RoundedView.swift */,
+			);
+			path = CommonViews;
+			sourceTree = "<group>";
+		};
+		DD3C51BA2B92929700B0263B /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				DD3C51BB2B9292BD00B0263B /* SignUpView.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		DD3C51C92B929BDB00B0263B /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				DD3C51CA2B929BEF00B0263B /* Firebase */,
+				DD3C51B02B9269DB00B0263B /* SingIn */,
+				DD3C51BA2B92929700B0263B /* SignUp */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		DD3C51CA2B929BEF00B0263B /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		DD4126A12B951B4800E46B49 /* GoRelax */ = {
+			isa = PBXGroup;
+			children = (
+				DD4126A22B951BAD00E46B49 /* MeditationDetailsView.swift */,
+				DD4126B62B96715F00E46B49 /* CountdownView.swift */,
+				DDBF23A22B9756E00080AF3F /* CountdownManager.swift */,
+			);
+			path = GoRelax;
+			sourceTree = "<group>";
+		};
+		DD5110CE2B9BCA6A007F7394 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				DD01BD2C2B9C7BC0003F40AB /* DataManager.swift */,
+				DD01BD3D2B9CFEFE003F40AB /* WatchOSCommunicationManager.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		DD6429532B93DB9900C2A6AA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				DD6429592B93DC8100C2A6AA /* HomeView.swift */,
+				DD64295D2B93E34900C2A6AA /* SearchBarView.swift */,
+				DD6429662B93E55900C2A6AA /* HeaderView.swift */,
+				DD6429742B94A01200C2A6AA /* MainMeditationInfo.swift */,
+				DD6429782B94A0CE00C2A6AA /* MeditationItemView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		DD6429542B93DBAE00C2A6AA /* MainTabView */ = {
+			isa = PBXGroup;
+			children = (
+				DD6429552B93DBE900C2A6AA /* MainTabView.swift */,
+			);
+			path = MainTabView;
+			sourceTree = "<group>";
+		};
+		DD6429612B93E39B00C2A6AA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DD6429622B93E40F00C2A6AA /* meditationViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DD64296A2B93ED3C00C2A6AA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DD64296B2B93ED6C00C2A6AA /* Meditation.swift */,
+				DD41269C2B95184F00E46B49 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DD64296F2B93F2D900C2A6AA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DD6429702B93F31800C2A6AA /* Color+Extennsion.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DD66A6DD2B97DAF500DABCEC /* WatchMindHarmony Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				DD01BD3F2B9D217D003F40AB /* WatchMindHarmony Watch App.entitlements */,
+				DD5110CE2B9BCA6A007F7394 /* Data */,
+				DD254F6E2B992B3800D7D83D /* View */,
+				DD254F6D2B992B2200D7D83D /* ViewModel */,
+				DD66A6DE2B97DAF500DABCEC /* WatchMindHarmonyApp.swift */,
+				DD66A6E22B97DAF800DABCEC /* Assets.xcassets */,
+				DD01BD2F2B9CB316003F40AB /* GoogleService-Info.plist */,
+				DD66A6E42B97DAF800DABCEC /* Preview Content */,
+			);
+			path = "WatchMindHarmony Watch App";
+			sourceTree = "<group>";
+		};
+		DD66A6E42B97DAF800DABCEC /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				DD66A6E52B97DAF800DABCEC /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DD66A6EE2B97DAF900DABCEC /* WatchMindHarmony Watch AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				DD66A6EF2B97DAF900DABCEC /* WatchMindHarmony_Watch_AppTests.swift */,
+			);
+			path = "WatchMindHarmony Watch AppTests";
+			sourceTree = "<group>";
+		};
+		DD66A6F82B97DAFA00DABCEC /* WatchMindHarmony Watch AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DD66A6F92B97DAFA00DABCEC /* WatchMindHarmony_Watch_AppUITests.swift */,
+				DD66A6FB2B97DAFA00DABCEC /* WatchMindHarmony_Watch_AppUITestsLaunchTests.swift */,
+			);
+			path = "WatchMindHarmony Watch AppUITests";
+			sourceTree = "<group>";
+		};
 		DD8202012B76877600E48B10 = {
 			isa = PBXGroup;
 			children = (
+				DD254F8F2B9B7DE700D7D83D /* SharedModels */,
 				DD82020C2B76877600E48B10 /* MindHarmony */,
 				DD82021D2B76877900E48B10 /* MindHarmonyTests */,
 				DD8202272B76877900E48B10 /* MindHarmonyUITests */,
+				DD66A6DD2B97DAF500DABCEC /* WatchMindHarmony Watch App */,
+				DD66A6EE2B97DAF900DABCEC /* WatchMindHarmony Watch AppTests */,
+				DD66A6F82B97DAFA00DABCEC /* WatchMindHarmony Watch AppUITests */,
 				DD82020B2B76877600E48B10 /* Products */,
+				DD254F912B9BA5B300D7D83D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,8 +404,7 @@
 			isa = PBXGroup;
 			children = (
 				DD82020A2B76877600E48B10 /* MindHarmony.app */,
-				DD82021A2B76877900E48B10 /* MindHarmonyTests.xctest */,
-				DD8202242B76877900E48B10 /* MindHarmonyUITests.xctest */,
+				DD66A6DC2B97DAF500DABCEC /* WatchMindHarmony Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,9 +412,18 @@
 		DD82020C2B76877600E48B10 /* MindHarmony */ = {
 			isa = PBXGroup;
 			children = (
+				DD01BD402B9D21A2003F40AB /* MindHarmony.entitlements */,
+				DD3C51AE2B9239E100B0263B /* Data */,
+				DD254F902B9BA57700D7D83D /* Info.plist */,
+				DDBF23972B9752870080AF3F /* Sounds */,
+				DD64296F2B93F2D900C2A6AA /* Extensions */,
+				DD6429612B93E39B00C2A6AA /* ViewModel */,
+				DD3C51AF2B9239F100B0263B /* View */,
+				DD3C51AD2B9239CD00B0263B /* Assets */,
 				DD82020D2B76877600E48B10 /* MindHarmonyApp.swift */,
-				DD82020F2B76877600E48B10 /* ContentView.swift */,
+				DD1A2DCE2B8BF64900ED08AF /* CategoryListScreen.swift */,
 				DD8202112B76877900E48B10 /* Assets.xcassets */,
+				DD3C51C42B929B5200B0263B /* GoogleService-Info.plist */,
 				DD8202132B76877900E48B10 /* Preview Content */,
 			);
 			path = MindHarmony;
@@ -127,9 +454,49 @@
 			path = MindHarmonyUITests;
 			sourceTree = "<group>";
 		};
+		DDBF23972B9752870080AF3F /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				DDBF23982B9752A30080AF3F /* relaxation-1.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		DDBF23A72B976FFF0080AF3F /* ConnectedDevices */ = {
+			isa = PBXGroup;
+			children = (
+				DDBF23A82B9770230080AF3F /* DeviceControlView.swift */,
+			);
+			path = ConnectedDevices;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		DD66A6DB2B97DAF400DABCEC /* WatchMindHarmony Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD66A7002B97DAFA00DABCEC /* Build configuration list for PBXNativeTarget "WatchMindHarmony Watch App" */;
+			buildPhases = (
+				DD66A6D82B97DAF400DABCEC /* Sources */,
+				DD66A6D92B97DAF400DABCEC /* Frameworks */,
+				DD66A6DA2B97DAF400DABCEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WatchMindHarmony Watch App";
+			packageProductDependencies = (
+				DD254F622B99255600D7D83D /* FirebaseFirestore */,
+				DD254F662B99259100D7D83D /* FirebaseAuth */,
+				DD254F6A2B99259100D7D83D /* FirebaseStorage */,
+				DD5110C82B9BC705007F7394 /* FirebaseFirestore */,
+				DD5110CA2B9BC759007F7394 /* FirebaseFirestore */,
+			);
+			productName = "WatchMindHarmony Watch App";
+			productReference = DD66A6DC2B97DAF500DABCEC /* WatchMindHarmony Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
 		DD8202092B76877600E48B10 /* MindHarmony */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DD82022E2B76877900E48B10 /* Build configuration list for PBXNativeTarget "MindHarmony" */;
@@ -137,51 +504,22 @@
 				DD8202062B76877600E48B10 /* Sources */,
 				DD8202072B76877600E48B10 /* Frameworks */,
 				DD8202082B76877600E48B10 /* Resources */,
+				DD66A7032B97DAFA00DABCEC /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				DD5110BD2B9BBA09007F7394 /* PBXTargetDependency */,
 			);
 			name = MindHarmony;
+			packageProductDependencies = (
+				DD5110BE2B9BC17E007F7394 /* FirebaseAuth */,
+				DD5110C02B9BC186007F7394 /* FirebaseFirestore */,
+				DD5110C22B9BC191007F7394 /* FirebaseStorage */,
+			);
 			productName = MindHarmony;
 			productReference = DD82020A2B76877600E48B10 /* MindHarmony.app */;
 			productType = "com.apple.product-type.application";
-		};
-		DD8202192B76877900E48B10 /* MindHarmonyTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DD8202312B76877900E48B10 /* Build configuration list for PBXNativeTarget "MindHarmonyTests" */;
-			buildPhases = (
-				DD8202162B76877900E48B10 /* Sources */,
-				DD8202172B76877900E48B10 /* Frameworks */,
-				DD8202182B76877900E48B10 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DD82021C2B76877900E48B10 /* PBXTargetDependency */,
-			);
-			name = MindHarmonyTests;
-			productName = MindHarmonyTests;
-			productReference = DD82021A2B76877900E48B10 /* MindHarmonyTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		DD8202232B76877900E48B10 /* MindHarmonyUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DD8202342B76877900E48B10 /* Build configuration list for PBXNativeTarget "MindHarmonyUITests" */;
-			buildPhases = (
-				DD8202202B76877900E48B10 /* Sources */,
-				DD8202212B76877900E48B10 /* Frameworks */,
-				DD8202222B76877900E48B10 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DD8202262B76877900E48B10 /* PBXTargetDependency */,
-			);
-			name = MindHarmonyUITests;
-			productName = MindHarmonyUITests;
-			productReference = DD8202242B76877900E48B10 /* MindHarmonyUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -193,16 +531,11 @@
 				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
+					DD66A6DB2B97DAF400DABCEC = {
+						CreatedOnToolsVersion = 15.2;
+					};
 					DD8202092B76877600E48B10 = {
 						CreatedOnToolsVersion = 15.2;
-					};
-					DD8202192B76877900E48B10 = {
-						CreatedOnToolsVersion = 15.2;
-						TestTargetID = DD8202092B76877600E48B10;
-					};
-					DD8202232B76877900E48B10 = {
-						CreatedOnToolsVersion = 15.2;
-						TestTargetID = DD8202092B76877600E48B10;
 					};
 				};
 			};
@@ -215,86 +548,168 @@
 				Base,
 			);
 			mainGroup = DD8202012B76877600E48B10;
+			packageReferences = (
+				DD3C51BF2B929A0B00B0263B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = DD82020B2B76877600E48B10 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				DD8202092B76877600E48B10 /* MindHarmony */,
-				DD8202192B76877900E48B10 /* MindHarmonyTests */,
-				DD8202232B76877900E48B10 /* MindHarmonyUITests */,
+				DD66A6DB2B97DAF400DABCEC /* WatchMindHarmony Watch App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		DD66A6DA2B97DAF400DABCEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD66A6E62B97DAF800DABCEC /* Preview Assets.xcassets in Resources */,
+				DD66A6E32B97DAF800DABCEC /* Assets.xcassets in Resources */,
+				DD01BD302B9CB316003F40AB /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DD8202082B76877600E48B10 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				DD8202152B76877900E48B10 /* Preview Assets.xcassets in Resources */,
 				DD8202122B76877900E48B10 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DD8202182B76877900E48B10 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DD8202222B76877900E48B10 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				DD3C51C52B929B5200B0263B /* GoogleService-Info.plist in Resources */,
+				DDBF23992B9752A30080AF3F /* relaxation-1.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		DD66A6D82B97DAF400DABCEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD66A6E12B97DAF500DABCEC /* ContentView.swift in Sources */,
+				DD254F762B9A825C00D7D83D /* MenuView.swift in Sources */,
+				DD254F992B9BAE5000D7D83D /* Color+Extennsion.swift in Sources */,
+				DD01BD422B9D2700003F40AB /* MeditationDetailView.swift in Sources */,
+				DD01BD3A2B9CF556003F40AB /* DataManager.swift in Sources */,
+				DD01BD432B9D2D4A003F40AB /* CountdownView.swift in Sources */,
+				DD01BD3E2B9CFEFE003F40AB /* WatchOSCommunicationManager.swift in Sources */,
+				DD254F972B9BADE800D7D83D /* Meditation.swift in Sources */,
+				DD254F742B9A3A6600D7D83D /* DeviceView.swift in Sources */,
+				DD254F702B9A3A1100D7D83D /* HomeView.swift in Sources */,
+				DD254F722B9A3A3D00D7D83D /* ProfileView.swift in Sources */,
+				DD254F982B9BADF000D7D83D /* User.swift in Sources */,
+				DD66A6DF2B97DAF500DABCEC /* WatchMindHarmonyApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DD8202062B76877600E48B10 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD6429632B93E40F00C2A6AA /* meditationViewModel.swift in Sources */,
+				DDBF23A32B9756E00080AF3F /* CountdownManager.swift in Sources */,
+				DD1A2DCF2B8BF64900ED08AF /* CategoryListScreen.swift in Sources */,
+				DD64295E2B93E34900C2A6AA /* SearchBarView.swift in Sources */,
+				DD4126B72B96715F00E46B49 /* CountdownView.swift in Sources */,
+				DD6429562B93DBE900C2A6AA /* MainTabView.swift in Sources */,
+				DD01BD3C2B9CF927003F40AB /* iPhoneCommunicationManager.swift in Sources */,
+				DD41269D2B95184F00E46B49 /* User.swift in Sources */,
+				DD4126A82B95399C00E46B49 /* ToggleFavorite.swift in Sources */,
+				DD64296C2B93ED6C00C2A6AA /* Meditation.swift in Sources */,
+				DD4126A32B951BAD00E46B49 /* MeditationDetailsView.swift in Sources */,
+				DD4126B22B966D4900E46B49 /* RoundedView.swift in Sources */,
+				DD6429792B94A0CE00C2A6AA /* MeditationItemView.swift in Sources */,
 				DD8202102B76877600E48B10 /* ContentView.swift in Sources */,
+				DD3C51B22B926A4B00B0263B /* SingInView.swift in Sources */,
 				DD82020E2B76877600E48B10 /* MindHarmonyApp.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DD8202162B76877900E48B10 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DD82021F2B76877900E48B10 /* MindHarmonyTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DD8202202B76877900E48B10 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DD8202292B76877900E48B10 /* MindHarmonyUITests.swift in Sources */,
-				DD82022B2B76877900E48B10 /* MindHarmonyUITestsLaunchTests.swift in Sources */,
+				DD6429752B94A01200C2A6AA /* MainMeditationInfo.swift in Sources */,
+				DD6429672B93E55900C2A6AA /* HeaderView.swift in Sources */,
+				DD4126AD2B95428700E46B49 /* DataManager.swift in Sources */,
+				DD64295A2B93DC8100C2A6AA /* HomeView.swift in Sources */,
+				DD3C51BC2B9292BD00B0263B /* SignUpView.swift in Sources */,
+				DD6429712B93F31800C2A6AA /* Color+Extennsion.swift in Sources */,
+				DDBF23A92B9770230080AF3F /* DeviceControlView.swift in Sources */,
+				DD3C51B72B928C7900B0263B /* SignInHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		DD82021C2B76877900E48B10 /* PBXTargetDependency */ = {
+		DD5110BD2B9BBA09007F7394 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DD8202092B76877600E48B10 /* MindHarmony */;
-			targetProxy = DD82021B2B76877900E48B10 /* PBXContainerItemProxy */;
-		};
-		DD8202262B76877900E48B10 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DD8202092B76877600E48B10 /* MindHarmony */;
-			targetProxy = DD8202252B76877900E48B10 /* PBXContainerItemProxy */;
+			target = DD66A6DB2B97DAF400DABCEC /* WatchMindHarmony Watch App */;
+			targetProxy = DD5110BC2B9BBA09007F7394 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		DD66A7012B97DAFA00DABCEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "WatchMindHarmony Watch App/WatchMindHarmony Watch App.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WatchMindHarmony Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 634XQ7A57Z;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = WatchMindHarmony;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.esgi.MindHarmony;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.esgi.MindHarmony.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.2;
+			};
+			name = Debug;
+		};
+		DD66A7022B97DAFA00DABCEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "WatchMindHarmony Watch App/WatchMindHarmony Watch App.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WatchMindHarmony Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 634XQ7A57Z;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = WatchMindHarmony;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.esgi.MindHarmony;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.esgi.MindHarmony.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.2;
+			};
+			name = Release;
+		};
 		DD82022C2B76877900E48B10 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -347,7 +762,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -404,7 +819,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -417,14 +832,18 @@
 		DD82022F2B76877900E48B10 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MindHarmony/MindHarmony.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MindHarmony/Preview Content\"";
 				DEVELOPMENT_TEAM = 634XQ7A57Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MindHarmony/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -437,6 +856,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.esgi.MindHarmony;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -446,14 +866,18 @@
 		DD8202302B76877900E48B10 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MindHarmony/MindHarmony.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MindHarmony/Preview Content\"";
 				DEVELOPMENT_TEAM = 634XQ7A57Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MindHarmony/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -466,91 +890,25 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.esgi.MindHarmony;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
-		DD8202322B76877900E48B10 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 634XQ7A57Z;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.esgi.MindHarmonyTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MindHarmony.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MindHarmony";
-			};
-			name = Debug;
-		};
-		DD8202332B76877900E48B10 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 634XQ7A57Z;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.esgi.MindHarmonyTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MindHarmony.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MindHarmony";
-			};
-			name = Release;
-		};
-		DD8202352B76877900E48B10 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 634XQ7A57Z;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.esgi.MindHarmonyUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MindHarmony;
-			};
-			name = Debug;
-		};
-		DD8202362B76877900E48B10 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 634XQ7A57Z;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.esgi.MindHarmonyUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MindHarmony;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		DD66A7002B97DAFA00DABCEC /* Build configuration list for PBXNativeTarget "WatchMindHarmony Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD66A7012B97DAFA00DABCEC /* Debug */,
+				DD66A7022B97DAFA00DABCEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		DD8202052B76877600E48B10 /* Build configuration list for PBXProject "MindHarmony" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -569,25 +927,59 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DD8202312B76877900E48B10 /* Build configuration list for PBXNativeTarget "MindHarmonyTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DD8202322B76877900E48B10 /* Debug */,
-				DD8202332B76877900E48B10 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DD8202342B76877900E48B10 /* Build configuration list for PBXNativeTarget "MindHarmonyUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DD8202352B76877900E48B10 /* Debug */,
-				DD8202362B76877900E48B10 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DD3C51BF2B929A0B00B0263B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.21.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DD254F622B99255600D7D83D /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FirebaseFirestore;
+		};
+		DD254F662B99259100D7D83D /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DD3C51BF2B929A0B00B0263B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		DD254F6A2B99259100D7D83D /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DD3C51BF2B929A0B00B0263B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		DD5110BE2B9BC17E007F7394 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DD3C51BF2B929A0B00B0263B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		DD5110C02B9BC186007F7394 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DD3C51BF2B929A0B00B0263B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		DD5110C22B9BC191007F7394 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DD3C51BF2B929A0B00B0263B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		DD5110C82B9BC705007F7394 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FirebaseFirestore;
+		};
+		DD5110CA2B9BC759007F7394 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DD3C51BF2B929A0B00B0263B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DD8202022B76877600E48B10 /* Project object */;
 }
