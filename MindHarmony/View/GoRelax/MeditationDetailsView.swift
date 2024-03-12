@@ -7,17 +7,24 @@
 
 import SwiftUI
 import AVFAudio
+import FirebaseAuth
 
 struct MeditationDetailsView: View {
     
     let meditation: Meditation
     @State private var isPlaying: Bool = false
     @State private var player: AVAudioPlayer?
+    @State private var isFavorite: Bool = false
+    @EnvironmentObject var dataManager : DataManager
+    var favoritesViewModel : FavoritesViewModel
+    
     
     var body: some View {
         VStack {
             //Header(image: "med-2")
-            Header(isPlaying: $isPlaying, image: "med-2", player: player)
+            Header(meditation : meditation, favoritesViewModel: favoritesViewModel, isPlaying: $isPlaying, image: "med-2", player: player )
+                .environmentObject(dataManager)
+            
             VStack(alignment: .leading) {
                 ScrollView(.vertical, showsIndicators: false) {
                     VStack {
@@ -32,7 +39,7 @@ struct MeditationDetailsView: View {
                                 .foregroundColor(Color.gray)
                         }
                         .onAppear {
-                            if let soundURL = Bundle.main.url(forResource: "relaxation-1", withExtension: "mp3") {
+                            if let soundURL = Bundle.main.url(forResource: meditation.sound, withExtension: "mp3") {
                                 do {
                                     self.player = try AVAudioPlayer(contentsOf: soundURL)
                                     
@@ -55,12 +62,16 @@ struct MeditationDetailsView: View {
         .statusBar(hidden: true)
        
     }
+    
 
 }
 
 
 //exhalation
 struct Header: View {
+    let meditation: Meditation
+    var favoritesViewModel : FavoritesViewModel
+    @EnvironmentObject var dataManager : DataManager
     @Environment(\.presentationMode) var presentationMode
     @State private var isFavorite: Bool = false
     @Binding var isPlaying: Bool
@@ -103,14 +114,24 @@ struct Header: View {
                         .foregroundColor(isFavorite ? .red : .black.opacity(0.5))
                 }
         )
-        
-        
-        
     }
     
     func toggleFavorite() {
-        isFavorite.toggle()
+        if let currentUser = Auth.auth().currentUser {
+            let userID = currentUser.uid
+            
+            isFavorite.toggle()
+            if isFavorite {
+                favoritesViewModel.addToFavorites(userID: userID, meditationID: meditation.id)
+            } else {
+                favoritesViewModel.removeFromFavorites(userID: userID, meditationID: meditation.id)
+            }
+        } else {
+            print("You are not connected !")
+        }
     }
+    
+   
     
     func togglePlay() {
            isPlaying.toggle()
@@ -127,7 +148,7 @@ struct Header: View {
 
 //struct addToFavorites {}
 
-
+/*
 struct RoundedCornerDetailsView: Shape {
     var radius: CGFloat = .infinity
     var corners: UIRectCorner = .allCorners
@@ -137,7 +158,7 @@ struct RoundedCornerDetailsView: Shape {
                                 cornerRadii: CGSize(width: radius, height: radius))
         return Path(path.cgPath)
     }
-}
+}*/
 
 extension View {
     func corcornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View {
@@ -146,5 +167,5 @@ extension View {
 }
 
 #Preview {
-    MeditationDetailsView(meditation: Meditation())
+    MeditationDetailsView(meditation: Meditation(), favoritesViewModel: FavoritesViewModel())
 }

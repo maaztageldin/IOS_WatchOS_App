@@ -31,7 +31,7 @@ struct MainMeditationInfo: View {
                 .font(.largeTitle)
                 .lineLimit(2)
             
-            Text(meditation.time)
+            Text(meditation.time + " Minutes")
                 .foregroundColor(.indigo)
                 .font(.caption)
             

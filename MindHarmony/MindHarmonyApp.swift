@@ -6,12 +6,20 @@
 //
 
 import SwiftUI
+import FirebaseCore
 
 @main
 struct MindHarmonyApp: App {
+    @StateObject var dataManager = DataManager()
+    
+    init() {
+        FirebaseApp.configure()
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(dataManager)
         }
     }
 }

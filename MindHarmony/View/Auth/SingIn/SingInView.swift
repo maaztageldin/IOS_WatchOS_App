@@ -13,7 +13,9 @@ struct SingInView: View {
     @State private var email: String = ""
     @State private var password: String = ""
     @State private var userIsLoggedIn = false
-    @StateObject var dataManager = DataManager()
+    //@StateObject var dataManager = DataManager()
+    @EnvironmentObject var dataManager : DataManager
+    
    
     var body: some View {
         if userIsLoggedIn {

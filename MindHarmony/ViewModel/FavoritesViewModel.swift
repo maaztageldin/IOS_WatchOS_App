@@ -1,53 +1,30 @@
 //
-//  DataManager.swift
+//  FavoritesViewModel.swift
 //  MindHarmony
 //
-//  Created by Maaz TAGELDIN on 04/03/2024.
+//  Created by Maaz TAGELDIN on 12/03/2024.
 //
 
-import SwiftUI
+import Foundation
 import Firebase
 
-class DataManager: ObservableObject {
-    @Published var meditations: [Meditation] = []
+class FavoritesViewModel: ObservableObject { 
+    @Published var favoriteMeditations: [Meditation] = []
     
-    @State var iPhoneConnector = iPhoneCommunicationManager()
     let db = Firestore.firestore()
     
     init() {
-        fetchAllMeditation()
-    }
-    
-    func fetchAllMeditation() {
-        meditations.removeAll()
         
-        let ref = db.collection("Meditation")
-        ref.getDocuments { [self] snapshot, error in
-            guard error == nil else {
-                print(error!.localizedDescription)
-                return
-            }
-            
-            if let snapshot = snapshot {
-                for document in snapshot.documents {
-                    let data = document.data()
-                    let id = data["id"] as? String ?? ""
-                    let title = data["title"] as? String ?? ""
-                    let image = data["image"] as? String ?? ""
-                    let reviwCount = data["reviwCount"] as? Int
-                    let sound = data["sound"] as? String ?? ""
-                    let time = data["time"] as? String ?? ""
-                    let description = data["description"] as? String ?? ""
-                    
-                    let meditation = Meditation(id: id,title: title, image: image, reviwCount: reviwCount ?? 0, sound: sound, time: time, description: description)
-                    self.meditations.append(meditation)
-                    
-                }
-            }
+        //Favorite Meditations for connected user
+      if let currentUser = Auth.auth().currentUser {
+            let userID = currentUser.uid
+            fetchFavoriteMeditationsByID(forUserID: userID)
+        } else {
+            print("You are not connected !")
         }
     }
     
-    /*func fetchFavoriteMeditationsByID(forUserID userID: String) {
+    func fetchFavoriteMeditationsByID(forUserID userID: String) {
         let userRef = db.collection("User").document(userID)
         userRef.getDocument { [weak self] snapshot, error in
             guard let document = snapshot, document.exists else {
@@ -135,6 +112,6 @@ class DataManager: ObservableObject {
                 }
             }
         }
-    }*/
+    }
 }
 

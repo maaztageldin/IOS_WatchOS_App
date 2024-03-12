@@ -8,7 +8,7 @@
 import SwiftUI
 import FirebaseFirestore
 
-func ToggleFavorite(user: User, meditation: Meditation) {
+/*func ToggleFavorite(user: User, meditation: Meditation) {
     var updatedFavorites = user.favorites
 
     // Si la méditation est déjà dans la liste des favoris la retirer
@@ -28,4 +28,4 @@ func ToggleFavorite(user: User, meditation: Meditation) {
             print("Favorites updated successfully.")
         }
     }
-}
+}*/

@@ -9,11 +9,11 @@ import SwiftUI
 import Foundation
 
 struct User: Codable, Identifiable {
-    var id: String?
+    var id: String
     var email: String
     var name: String
     var dateOfBirth: Date
-    var photo: String?
+    var photo: String
     var favorites: [String]
     
     enum CodingKeys: String, CodingKey {
@@ -24,4 +24,15 @@ struct User: Codable, Identifiable {
         case photo
         case favorites
     }
+    
+    var dictionary: [String: Any] {
+            return [
+                "id": id,
+                "email": email,
+                "name": name,
+                "dateOfBirth": dateOfBirth, // You may need to format this to a suitable format like String
+                "photo": photo,
+                "favorites": favorites
+            ]
+        }
 }

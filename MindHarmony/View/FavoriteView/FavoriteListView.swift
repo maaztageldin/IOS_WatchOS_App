@@ -1,37 +1,30 @@
 //
-//  HomeView.swift
+//  FavoriteListView.swift
 //  MindHarmony
 //
-//  Created by Maaz TAGELDIN on 02/03/2024.
+//  Created by Maaz TAGELDIN on 10/03/2024.
 //
 
 import SwiftUI
 
-struct HomeView: View {
-    @ObservedObject var viewModel: MeditationViewModel
-    //@State private var showDetails = false
-    @EnvironmentObject var dataManager : DataManager
+struct FavoriteListView: View {
     
-    @State private var showDetails : Array = Array(repeating: false, count: 5)
+    @ObservedObject var viewModel: MeditationViewModel
+    @State private var showDetails = false
+    @EnvironmentObject var dataManager : DataManager
+    var favoritesViewModel : FavoritesViewModel
     
     var body: some View {
         NavigationView {
-            //Header View
             VStack {
-                HeaderView(pageTitle: "Select your category", pageSubTitle: "Relaxation mode")
+                HeaderView(pageTitle: "Your Favorites", pageSubTitle: "")
                 
-                //Search View
-                SearchBarView(searchText: $viewModel.searchText)
-        
                 //ScrollView
-                
                 VStack {
                     ScrollView(showsIndicators: false) {
-                        ForEach(dataManager.meditations, id: \.id) { meditation in
-                            //Meditation View
-                            
+                        ForEach(favoritesViewModel.favoriteMeditations, id: \.id) { meditation in
                             Button(action: {
-                                showDetails[1].toggle()
+                                showDetails = true
                             }) {
                                 MeditationItemView(meditation: meditation)
                             }
@@ -40,10 +33,8 @@ struct HomeView: View {
                                 NavigationLink(
                                     destination:
                                         MeditationDetailsView(meditation: meditation, favoritesViewModel: FavoritesViewModel())
-                                        .navigationBarBackButtonHidden(true)
-                                        //.environmentObject(dataManager)
-                                    ,
-                                    isActive: $showDetails[1]) { EmptyView() }
+                                        .navigationBarBackButtonHidden(true),
+                                    isActive: $showDetails) { EmptyView() }
                             )
                         }
                     }
@@ -54,7 +45,7 @@ struct HomeView: View {
         .padding()
     }
 }
-                        
+
 #Preview {
-    HomeView(viewModel: MeditationViewModel())
+    FavoriteListView(viewModel: MeditationViewModel(), favoritesViewModel: FavoritesViewModel())
 }

@@ -6,15 +6,14 @@
 //
  
 import SwiftUI
-import FirebaseCore
 
 struct ContentView: View {
-    @StateObject var dataManager = DataManager()
+    //@StateObject var dataManager = DataManager()
+    
+    @EnvironmentObject var dataManager : DataManager
     @State var iPhoneConnector = iPhoneCommunicationManager()
     
-    init() {
-        FirebaseApp.configure()
-    }
+    
     
     var body: some View {
         NavigationView {
@@ -42,7 +41,7 @@ struct ContentView: View {
                     HStack {
                         Spacer()
                         NavigationLink(
-                            destination: /*MainTabView())*/SingInView()) {
+                            destination: /*MainTabView())*/SingInView().environmentObject(dataManager)) {
                                 RoundedView(
                                     boarderColor: .gray,
                                     title: "Sign in",
@@ -61,7 +60,7 @@ struct ContentView: View {
                     HStack {
                         Spacer()
                         NavigationLink(
-                            destination: SignUpView()) {
+                            destination: SignUpView().environmentObject(dataManager)) {
                                 RoundedView(
                                     boarderColor: .clear,
                                     title: "Sign up",

@@ -14,7 +14,6 @@ struct MeditationItemView: View {
         
         ZStack {
             HStack {
-                //MainMeditationInfo
                 MainMeditationInfo(meditation: meditation)
                 Spacer()
             }
