@@ -12,7 +12,6 @@ struct SignUpView: View {
     @State private var email: String = ""
     @State private var password: String = ""
     @State private var userIsLoggedIn = false
-    //@StateObject var dataManager = DataManager()
     @EnvironmentObject var dataManager : DataManager
 
     var body: some View {
@@ -25,16 +24,10 @@ struct SignUpView: View {
     }
 
     var content: some View {
-        ZStack {
-            SignInHeader(
-                title: "Sign In",
-                subTitle: "Hello!"
-            )
             VStack {
-                SignInHeader(
-                    title: "Sign Up",
-                    subTitle: "Create new account"
-                )
+                Text("Register")
+                    .foregroundColor(Color.gray)
+                    .fontWeight(.bold)
                 SignInBody {
                     VStack {
                         TextFielWithUnderLineStyle(
@@ -100,7 +93,7 @@ struct SignUpView: View {
                     .padding(.top, 40)
                 }
             }
-        }
+        //}
     }
 }
 

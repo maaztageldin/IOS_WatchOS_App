@@ -10,7 +10,6 @@ import SwiftUI
 import FirebaseAuth
 
 struct UserProfileView: View {
-    @State private var name = "John Doe"
     @State private var birthDate = Date()
     @State private var selectedImage: UIImage?
     @State private var isShowingImagePicker = false
@@ -57,28 +56,11 @@ struct UserProfileView: View {
             }
             .padding()
             
-            Button(action: {
-                do {
-                    try Auth.auth().signOut()
-                } catch let signOutError as NSError {
-                    print("Erreur de déconnexion : \(signOutError.localizedDescription)")
-                }
-            }) {
-                Text("Sign Out")
-            }
-            
-            .padding()
-            .foregroundColor(.white)
-            .background(Color.red)
-            .cornerRadius(8)
-            .shadow(color: .black, radius: 3, x: 0, y: 2)
-            
             NavigationLink(
                 destination: HomeView(viewModel: MeditationViewModel()),
                 isActive: $showHomeView,
                 label: { EmptyView() }
             )
-            
         }
         .sheet(isPresented: $isShowingImagePicker) {
             ImagePicker(selectedImage: $selectedImage)

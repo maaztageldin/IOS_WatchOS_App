@@ -21,7 +21,6 @@ struct MeditationDetailsView: View {
     
     var body: some View {
         VStack {
-            //Header(image: "med-2")
             Header(meditation : meditation, favoritesViewModel: favoritesViewModel, isPlaying: $isPlaying, image: "med-2", player: player )
                 .environmentObject(dataManager)
             
@@ -60,10 +59,7 @@ struct MeditationDetailsView: View {
         }
         .edgesIgnoringSafeArea(.all)
         .statusBar(hidden: true)
-       
     }
-    
-
 }
 
 

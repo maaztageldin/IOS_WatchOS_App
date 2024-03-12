@@ -18,9 +18,7 @@ struct MainMeditationInfo: View {
                     .foregroundColor(.white)
                     .background(Color.indigo)
                     .cornerRadius(15)
-                    
-                    
-                
+
                 Text("\(String(meditation.reviwCount)) review")
                     .foregroundColor(.gray)
                     .font(.caption2)

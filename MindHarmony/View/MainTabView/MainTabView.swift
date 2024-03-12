@@ -8,6 +8,7 @@ import SwiftUI
 
 struct MainTabView: View {
     @EnvironmentObject var dataManager : DataManager
+    @StateObject var homeKitStorage = HomeKitStorage()
     
     var body: some View {
         TabView {
@@ -17,13 +18,13 @@ struct MainTabView: View {
                     Image(systemName: "house")
                     Text("Home")
                 }
-            FavoriteListView(viewModel: MeditationViewModel(), favoritesViewModel: FavoritesViewModel())
+            FavoriteListView(favoritesViewModel: FavoritesViewModel())
                 .environmentObject(dataManager)
                 .tabItem {
                     Image(systemName: "suit.heart")
                     Text("Favorite")
                 }
-            HomesListPage(model: HomesListPageModel(HomeKitStorage()))
+            HomesListPage(model: HomesListPageModel(HomeKitStorage())).environmentObject(homeKitStorage) 
                 .tabItem {
                     Image(systemName: "tv.and.mediabox.fill")
                     Text("Devices")

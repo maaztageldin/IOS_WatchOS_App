@@ -8,10 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
-    //@StateObject var dataManager = DataManager()
-    
     @EnvironmentObject var dataManager : DataManager
     @State var iPhoneConnector = iPhoneCommunicationManager()
+    
     
     
     
@@ -48,7 +47,6 @@ struct ContentView: View {
                                     titleForegroundColor: .indigo,
                                     backgroundColor: .white,
                                     action: {
-                                        // TO DO: - navigation to sign in screen
                                     })
                                 .offset(x: -100)
                                 .onAppear() {
@@ -67,7 +65,6 @@ struct ContentView: View {
                                     titleForegroundColor: .white,
                                     backgroundColor: .indigo,
                                     action:{
-                                        //TO DO - navigation to signn up screen
                                     })
                                     .offset(x: -100)
                             }

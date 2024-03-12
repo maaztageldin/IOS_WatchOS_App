@@ -9,7 +9,6 @@ import SwiftUI
 
 struct HomeView: View {
     @ObservedObject var viewModel: MeditationViewModel
-    //@State private var showDetails = false
     @EnvironmentObject var dataManager : DataManager
     
     @State private var showDetails : Array = Array(repeating: false, count: 5)
@@ -24,7 +23,6 @@ struct HomeView: View {
                 SearchBarView(searchText: $viewModel.searchText)
         
                 //ScrollView
-                
                 VStack {
                     ScrollView(showsIndicators: false) {
                         ForEach(dataManager.meditations, id: \.id) { meditation in
@@ -34,6 +32,7 @@ struct HomeView: View {
                                 showDetails[1].toggle()
                             }) {
                                 MeditationItemView(meditation: meditation)
+                                    .environmentObject(dataManager)
                             }
                             
                             .background(
@@ -41,7 +40,6 @@ struct HomeView: View {
                                     destination:
                                         MeditationDetailsView(meditation: meditation, favoritesViewModel: FavoritesViewModel())
                                         .navigationBarBackButtonHidden(true)
-                                        //.environmentObject(dataManager)
                                     ,
                                     isActive: $showDetails[1]) { EmptyView() }
                             )

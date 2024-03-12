@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 struct SearchBarView: UIViewRepresentable {
     
     typealias UIViewType = UISearchBar

@@ -4,12 +4,10 @@
 //
 //  Created by Maaz TAGELDIN on 10/03/2024.
 //
-
 import SwiftUI
 
 struct FavoriteListView: View {
     
-    @ObservedObject var viewModel: MeditationViewModel
     @State private var showDetails = false
     @EnvironmentObject var dataManager : DataManager
     var favoritesViewModel : FavoritesViewModel
@@ -47,5 +45,5 @@ struct FavoriteListView: View {
 }
 
 #Preview {
-    FavoriteListView(viewModel: MeditationViewModel(), favoritesViewModel: FavoritesViewModel())
+    FavoriteListView(favoritesViewModel: FavoritesViewModel())
 }

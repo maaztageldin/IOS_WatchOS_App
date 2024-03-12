@@ -13,10 +13,8 @@ struct SingInView: View {
     @State private var email: String = ""
     @State private var password: String = ""
     @State private var userIsLoggedIn = false
-    //@StateObject var dataManager = DataManager()
     @EnvironmentObject var dataManager : DataManager
-    
-   
+
     var body: some View {
         if userIsLoggedIn {
             MainTabView()
@@ -27,11 +25,10 @@ struct SingInView: View {
     }
     
     var content: some View {
-        ZStack {
-            SignInHeader(
-                title: "Sign In",
-                subTitle: "Hello again, Welcome back!"
-            )
+        VStack {
+            Text("Hello again, Welcome back!")
+                .foregroundColor(Color.gray)
+                .fontWeight(.bold)
             SignInBody {
                 VStack {
                     TextFielWithUnderLineStyle(

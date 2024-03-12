@@ -40,21 +40,20 @@ import HomeKit
 struct HomesListPage: View {
     
     @ObservedObject var model: HomesListPageModel
+    @EnvironmentObject var homeKitStorage: HomeKitStorage
     
     @State private var selectedHome: UUID? = nil
     
     var body: some View {
         NavigationView {
             VStack {
-                NavigationLink(destination: AccessoryDiscoveryView()) {
-                    Text("Find accessories")
-                }
                 
-                /*List {
+                
+                List {
                     Section(header: HStack {
                         
                         Text("My Homes")
-                        Button(action: model.addHome) { Text("Add Home")}
+                        Button(action: model.addHome) { Text("Add Home ... ")}
                         
                     }) {
                         ForEach(model.homes, id: \.id) { home in
@@ -68,26 +67,52 @@ struct HomesListPage: View {
                         }
                     }
                     
-                }*/
+                }
             }
             .navigationBarTitle("My Homes")
         }
+        .environmentObject(homeKitStorage)
     }
 }
 
 
 struct AccessoryDiscoveryView: View {
-    @ObservedObject var accessoryManager = AccessoryManager()
+    @ObservedObject var accessoryManager: AccessoryManager
+    @Binding var selectedHome: UUID?
+    var homeKitStorage: HomeKitStorage
+
+    @State private var selectedAccessory: HMAccessory?
 
     var body: some View {
         List(accessoryManager.accessories, id: \.self) { accessory in
-            Text(accessory.name)
+            Button(action: {
+                selectedAccessory = accessory
+            }) {
+                Text(accessory.name)
+            }
         }
         .onAppear {
             self.accessoryManager.startSearching()
         }
+        .sheet(item: $selectedAccessory) { accessory in
+            Button(action: {
+                homeKitStorage.addAccessory(accessory, to: selectedHome ?? UUID())
+            }) {
+                Text("Add to Home")
+            }
+        }
     }
 }
+
+extension HMAccessory: Identifiable {
+    public var id: UUID {
+        // Vous pouvez utiliser l'identifiant de l'accessoire comme identifiant unique
+        return self.uniqueIdentifier
+    }
+}
+
+
+
 
 class HomesListPageModel: ObservableObject {
     

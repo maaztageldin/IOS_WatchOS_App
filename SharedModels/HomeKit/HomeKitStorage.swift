@@ -13,6 +13,11 @@ class HomeKitStorage : NSObject, ObservableObject, HMHomeManagerDelegate {
     
     private var hManager: HMHomeManager!
     
+    override init() {
+            super.init()
+            load() 
+        }
+    
     func load() {
         if hManager == nil {
             hManager = .init()
@@ -28,7 +33,7 @@ class HomeKitStorage : NSObject, ObservableObject, HMHomeManagerDelegate {
     func addHome() {
         
         guard let hManager = hManager else {
-                print("Home manager is nil")
+                //print("Home manager is nil")
                 return
         }
         hManager.addHome(withName: "NewHome\(UUID())") { [weak self] (home, error) in
@@ -40,9 +45,15 @@ class HomeKitStorage : NSObject, ObservableObject, HMHomeManagerDelegate {
     }
     
     func addAccessory(_ accessory: HMAccessory, to homeId: UUID) {
-        homes.first { home in home.uniqueIdentifier == homeId }!.addAccessory(accessory) {error in
-            
-            print(error ?? " ")
+            guard let home = homes.first(where: { $0.uniqueIdentifier == homeId }) else {
+                return
+            }
+            home.addAccessory(accessory) { error in
+                if let error = error {
+                    print("Error adding accessory: \(error)")
+                } else {
+                    print("Accessory added successfully.")
+                }
+            }
         }
-    }
 }
