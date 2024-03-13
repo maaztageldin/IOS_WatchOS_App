@@ -33,10 +33,9 @@ class HomeKitStorage : NSObject, ObservableObject, HMHomeManagerDelegate {
     func addHome() {
         
         guard let hManager = hManager else {
-                //print("Home manager is nil")
                 return
         }
-        hManager.addHome(withName: "NewHome\(UUID())") { [weak self] (home, error) in
+        hManager.addHome(withName: "(UUID())") { [weak self] (home, error) in
             
             guard let self = self else {return}
             

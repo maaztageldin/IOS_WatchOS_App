@@ -63,6 +63,10 @@
 		DD8202102B76877600E48B10 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD82020F2B76877600E48B10 /* ContentView.swift */; };
 		DD8202122B76877900E48B10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD8202112B76877900E48B10 /* Assets.xcassets */; };
 		DD8202152B76877900E48B10 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD8202142B76877900E48B10 /* Preview Assets.xcassets */; };
+		DD822F1F2BA09BFB0099CF0A /* relaxation_sounds.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD822F1D2BA09BFB0099CF0A /* relaxation_sounds.mp3 */; };
+		DD822F202BA09BFB0099CF0A /* relaxation_sounds.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD822F1D2BA09BFB0099CF0A /* relaxation_sounds.mp3 */; };
+		DD822F212BA09BFB0099CF0A /* gratitude_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD822F1E2BA09BFB0099CF0A /* gratitude_music.mp3 */; };
+		DD822F222BA09BFB0099CF0A /* gratitude_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD822F1E2BA09BFB0099CF0A /* gratitude_music.mp3 */; };
 		DDBF23992B9752A30080AF3F /* relaxation-1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DDBF23982B9752A30080AF3F /* relaxation-1.mp3 */; };
 		DDBF23A32B9756E00080AF3F /* CountdownManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBF23A22B9756E00080AF3F /* CountdownManager.swift */; };
 		DDBF23A92B9770230080AF3F /* DeviceControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBF23A82B9770230080AF3F /* DeviceControlView.swift */; };
@@ -146,6 +150,8 @@
 		DD82021E2B76877900E48B10 /* MindHarmonyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindHarmonyTests.swift; sourceTree = "<group>"; };
 		DD8202282B76877900E48B10 /* MindHarmonyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindHarmonyUITests.swift; sourceTree = "<group>"; };
 		DD82022A2B76877900E48B10 /* MindHarmonyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindHarmonyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DD822F1D2BA09BFB0099CF0A /* relaxation_sounds.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = relaxation_sounds.mp3; path = ../../../../Downloads/relaxation_sounds.mp3; sourceTree = "<group>"; };
+		DD822F1E2BA09BFB0099CF0A /* gratitude_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = gratitude_music.mp3; path = ../../../../Downloads/gratitude_music.mp3; sourceTree = "<group>"; };
 		DDBF23982B9752A30080AF3F /* relaxation-1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "relaxation-1.mp3"; sourceTree = "<group>"; };
 		DDBF23A22B9756E00080AF3F /* CountdownManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownManager.swift; sourceTree = "<group>"; };
 		DDBF23A82B9770230080AF3F /* DeviceControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceControlView.swift; sourceTree = "<group>"; };
@@ -253,7 +259,6 @@
 			children = (
 				DD503E152B9DF62D007ADCC5 /* ProfileView */,
 				DD503E122B9DD6C7007ADCC5 /* FavoriteView */,
-				DDBF23A72B976FFF0080AF3F /* ConnectedDevices */,
 				DD4126A12B951B4800E46B49 /* GoRelax */,
 				DD6429542B93DBAE00C2A6AA /* MainTabView */,
 				DD6429532B93DB9900C2A6AA /* Home */,
@@ -375,6 +380,7 @@
 		DD64296F2B93F2D900C2A6AA /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				DDBF23A72B976FFF0080AF3F /* ConnectedDevices */,
 				DD6429702B93F31800C2A6AA /* Color+Extennsion.swift */,
 			);
 			path = Extensions;
@@ -492,6 +498,8 @@
 		DDBF23972B9752870080AF3F /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				DD822F1E2BA09BFB0099CF0A /* gratitude_music.mp3 */,
+				DD822F1D2BA09BFB0099CF0A /* relaxation_sounds.mp3 */,
 				DDBF23982B9752A30080AF3F /* relaxation-1.mp3 */,
 			);
 			path = Sounds;
@@ -603,7 +611,9 @@
 			files = (
 				DD66A6E62B97DAF800DABCEC /* Preview Assets.xcassets in Resources */,
 				DD242AF02BA060550047536F /* relaxation-1.mp3 in Resources */,
+				DD822F202BA09BFB0099CF0A /* relaxation_sounds.mp3 in Resources */,
 				DD66A6E32B97DAF800DABCEC /* Assets.xcassets in Resources */,
+				DD822F222BA09BFB0099CF0A /* gratitude_music.mp3 in Resources */,
 				DD01BD302B9CB316003F40AB /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -614,7 +624,9 @@
 			files = (
 				DD8202152B76877900E48B10 /* Preview Assets.xcassets in Resources */,
 				DD8202122B76877900E48B10 /* Assets.xcassets in Resources */,
+				DD822F1F2BA09BFB0099CF0A /* relaxation_sounds.mp3 in Resources */,
 				DD3C51C52B929B5200B0263B /* GoogleService-Info.plist in Resources */,
+				DD822F212BA09BFB0099CF0A /* gratitude_music.mp3 in Resources */,
 				DDBF23992B9752A30080AF3F /* relaxation-1.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

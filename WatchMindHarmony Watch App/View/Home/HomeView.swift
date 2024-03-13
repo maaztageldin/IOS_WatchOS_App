@@ -73,7 +73,7 @@ let meditations: [Meditation] = [
                 title: "Meditation 1",
                 image: "meditation1",
                 reviwCount: 10,
-                sound: "meditation_sound_1",
+                sound: "relaxation-1",
                 time: "10 min",
                 description: "Description for meditation 1"),
     
@@ -81,7 +81,7 @@ let meditations: [Meditation] = [
                 title: "Meditation 2",
                 image: "meditation2",
                 reviwCount: 15,
-                sound: "meditation_sound_2",
+                sound: "relaxation_sounds",
                 time: "15 min",
                 description: "Description for meditation 2"),
     
@@ -89,7 +89,7 @@ let meditations: [Meditation] = [
                 title: "Meditation 3",
                 image: "meditation3",
                 reviwCount: 8,
-                sound: "meditation_sound_3",
+                sound: "gratitude_music",
                 time: "12 min",
                 description: "Description for meditation 3"),
     

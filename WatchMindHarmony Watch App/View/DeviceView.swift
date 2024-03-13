@@ -14,20 +14,19 @@ struct DeviceView: View {
 
     var body: some View {
         VStack {
-          //  HeaderView(pageTitle: "Devices", pageSubTitle: "Manage your devices")
             
             ScrollView {
                 VStack(spacing: 20) {
                     DeviceRowView(deviceName: "Living Room Lights", isOn: livingRoomLightsOn) {
-                        // Code pour contrôler les lumières du salon
+                        
                         livingRoomLightsOn.toggle()
                     }
                     DeviceRowView(deviceName: "Living Room Blinds", isOn: livingRoomBlindsOpen) {
-                        // Code pour contrôler les stores du salon
+                    
                         livingRoomBlindsOpen.toggle()
                     }
                     DeviceRowView(deviceName: "Living Room Windows", isOn: livingRoomWindowsOpen) {
-                        // Code pour contrôler les fenêtres du salon
+                    
                         livingRoomWindowsOpen.toggle()
                     }
                 }
@@ -53,14 +52,10 @@ struct DeviceRowView: View {
             .background(isOn ? Color.red : Color.green)
             .foregroundColor(.white)
             .cornerRadius(8)
-            .fixedSize() // Permet d'adapter la taille du bouton
+            .fixedSize()
         }
     }
 }
-
-// Ajoutez votre vue HeaderView personnalisée ici
-
-
 
 #Preview {
     DeviceView()

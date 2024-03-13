@@ -26,7 +26,6 @@ struct HomeView: View {
                 VStack {
                     ScrollView(showsIndicators: false) {
                         ForEach(dataManager.meditations, id: \.id) { meditation in
-                            //Meditation View
                             
                             Button(action: {
                                 showDetails[1].toggle()

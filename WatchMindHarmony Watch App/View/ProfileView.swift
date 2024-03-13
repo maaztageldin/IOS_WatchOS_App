@@ -62,35 +62,28 @@ struct ProfileView: View {
     }
 }
 
-// Vue pour sélectionner une nouvelle photo de profil
 struct ImagePicker: View {
     @Binding var image: Image
     
     var body: some View {
-        // Implémentez ici la logique pour choisir une nouvelle image
-        // Utilisez UIImagePickerController ou une autre méthode
         Text("Select Image")
     }
 }
 
-// Vue pour modifier du texte
 struct EditTextView: View {
     let title: String
     @Binding var text: String
     
     var body: some View {
-        // Implémentez ici la logique pour modifier du texte
         TextField("Enter \(title)", text: $text)
             .padding()
     }
 }
 
-// Vue pour modifier la date
 struct EditDateView: View {
     @Binding var date: Date
     
     var body: some View {
-        // Implémentez ici la logique pour modifier la date
         DatePicker("Select Date", selection: $date, displayedComponents: .date)
             .datePickerStyle(WheelDatePickerStyle())
             .labelsHidden()
